@@ -1,15 +1,20 @@
-body {
+html, body {
+  height: auto;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  height: 100vh;
   background-color: #f4f4f4;
   font-family: Arial, sans-serif;
-  margin: 0;
 }
 
 .container {
+  width: 100%;
+  max-width: 1000px;
   text-align: center;
+  padding: 20px;
 }
 
 .profile-card {
@@ -17,7 +22,9 @@ body {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 300px;
+  width: 100%;
+  max-width: 310px;
+  margin: 50px auto; /* Добавляем отступ сверху, чтобы он не прилипал */
 }
 
 .avatar {
@@ -40,5 +47,77 @@ h1 {
 }
 
 .links a:hover {
+  text-decoration: underline;
+}
+
+.portfolio {
+  text-align: center;
+  width: 100%;
+  max-width: 900px;
+  margin-left: 0;
+  margin-top: 30px;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 100%;
+  max-width: 960px;
+  margin: 20px auto;
+  padding: 0 10px;
+  box-sizing: border-box; /* Чтобы padding не увеличивал ширину */
+}
+
+/* Адаптив для мобильных: 1 проект в ряд на узких экранах */
+@media (max-width: 900px) {
+  .projects {
+    grid-template-columns: repeat(2, 1fr); /* 2 карточки в ряд на средних экранах */
+  }
+}
+
+@media (max-width: 600px) {
+  .projects {
+    grid-template-columns: repeat(1, 1fr); /* 1 карточка в ряд на мобильных */
+  }
+}
+
+.project-card {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /*width: 300px;*/
+  transition: transform 0.2s ease-in-out;
+
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Распределяет элементы: заголовок вверху, ссылка внизу */
+  background: white;
+
+  height: 90%; /* Делаем карточки одинаковой высоты */
+
+
+
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+}
+
+.project-card h3 {
+  margin: 10px 0;
+}
+
+.project-card a {
+  display: block;
+  margin-top: 30px;
+  color: #007bff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.project-card a:hover {
   text-decoration: underline;
 }
