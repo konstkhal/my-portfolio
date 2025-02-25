@@ -1,4 +1,3 @@
-/* No need to redefine html/body margins, normalize.css handles it */
 html, body {
   height: auto;
   min-height: 100vh;
@@ -8,6 +7,7 @@ html, body {
   background-color: #f4f4f4;
   font-family: Arial, sans-serif;
   color: #333;
+  overflow-x: hidden;
 }
 
 .container {
@@ -16,6 +16,7 @@ html, body {
   text-align: center;
   padding: 20px;
   color: #333;
+  box-sizing: border-box;
 }
 
 .profile-card {
@@ -36,7 +37,6 @@ html, body {
   object-fit: cover;
 }
 
-/* h1 is already normalized, just add custom styles */
 h1 {
   margin: 10px 0;
   color: #333;
@@ -46,7 +46,6 @@ p {
   color: #555;
 }
 
-/* Rest of your CSS remains unchanged */
 .links a {
   display: block;
   margin-top: 10px;
@@ -76,6 +75,7 @@ p {
   margin: 20px auto;
   padding: 0 10px;
   box-sizing: border-box;
+  justify-content: center;
 }
 
 @media (max-width: 900px) {
@@ -86,7 +86,9 @@ p {
 
 @media (max-width: 600px) {
   .projects {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: 1fr;
+    padding: 0 5px;
+    max-width: 100%;
   }
 }
 
@@ -101,6 +103,8 @@ p {
   justify-content: space-between;
   height: 90%;
   color: #333;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .project-card:hover {
@@ -122,7 +126,7 @@ p {
 
 .project-card a {
   display: block;
-  margin-top: 30px;
+  margin-top: 30px; /* Default for desktop */
   color: #007bff;
   font-weight: bold;
   text-decoration: none;
@@ -130,4 +134,11 @@ p {
 
 .project-card a:hover {
   text-decoration: underline;
+}
+
+/* Adjust link position on mobile */
+@media (max-width: 600px) {
+  .project-card a {
+    margin-top: 15px; /* Reduce margin on mobile for tighter spacing */
+  }
 }
