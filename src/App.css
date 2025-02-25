@@ -1,13 +1,13 @@
+/* No need to redefine html/body margins, normalize.css handles it */
 html, body {
   height: auto;
   min-height: 100vh;
-  margin: 0;
-  padding: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #f4f4f4;
   font-family: Arial, sans-serif;
+  color: #333;
 }
 
 .container {
@@ -15,6 +15,7 @@ html, body {
   max-width: 1000px;
   text-align: center;
   padding: 20px;
+  color: #333;
 }
 
 .profile-card {
@@ -24,7 +25,8 @@ html, body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 100%;
   max-width: 310px;
-  margin: 50px auto; /* Добавляем отступ сверху, чтобы он не прилипал */
+  margin: 50px auto;
+  color: #333;
 }
 
 .avatar {
@@ -34,10 +36,17 @@ html, body {
   object-fit: cover;
 }
 
+/* h1 is already normalized, just add custom styles */
 h1 {
   margin: 10px 0;
+  color: #333;
 }
 
+p {
+  color: #555;
+}
+
+/* Rest of your CSS remains unchanged */
 .links a {
   display: block;
   margin-top: 10px;
@@ -66,19 +75,18 @@ h1 {
   max-width: 960px;
   margin: 20px auto;
   padding: 0 10px;
-  box-sizing: border-box; /* Чтобы padding не увеличивал ширину */
+  box-sizing: border-box;
 }
 
-/* Адаптив для мобильных: 1 проект в ряд на узких экранах */
 @media (max-width: 900px) {
   .projects {
-    grid-template-columns: repeat(2, 1fr); /* 2 карточки в ряд на средних экранах */
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 600px) {
   .projects {
-    grid-template-columns: repeat(1, 1fr); /* 1 карточка в ряд на мобильных */
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 
@@ -87,19 +95,12 @@ h1 {
   padding: 15px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  /*width: 300px;*/
   transition: transform 0.2s ease-in-out;
-
-
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Распределяет элементы: заголовок вверху, ссылка внизу */
-  background: white;
-
-  height: 90%; /* Делаем карточки одинаковой высоты */
-
-
-
+  justify-content: space-between;
+  height: 90%;
+  color: #333;
 }
 
 .project-card:hover {
@@ -108,6 +109,15 @@ h1 {
 
 .project-card h3 {
   margin: 10px 0;
+  color: #333;
+}
+
+.project-card em {
+  color: #777;
+}
+
+.project-card p {
+  color: #555;
 }
 
 .project-card a {

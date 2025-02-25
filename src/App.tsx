@@ -1,6 +1,8 @@
 import React from 'react';
 import './App.css';
 import profilePic from './assets/profile.jpg';
+import 'normalize.css';
+import './App.css';
 
 const projects = [
 	{
