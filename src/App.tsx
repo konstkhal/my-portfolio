@@ -6,6 +6,16 @@ import './App.css';
 
 const projects = [
 	{
+		yearDate: '2024',
+		title:
+			'Health Tech Start-Up landing',
+		description:
+			'Page to demonstrate my skills in React, TypeScript, Material UI, Netlify, Automated Deployment',
+		link: 'https://groshmed.com/',
+		linkTitle: 'View deployed landing',
+	},
+
+	{
 		yearDate: '2025',
 		title: 'One-pager “My portfolio"',
 		description:
