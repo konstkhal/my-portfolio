@@ -100,11 +100,10 @@ p {
   transition: transform 0.2s ease-in-out;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  height: 90%;
   color: #333;
   width: 100%;
   box-sizing: border-box;
+  min-height: 100%; /* Stretch to fill grid cell */
 }
 
 .project-card:hover {
@@ -122,23 +121,18 @@ p {
 
 .project-card p {
   color: #555;
+  margin-bottom: 15px;
+  flex-grow: 1; /* Allow paragraph to expand and push link down */
 }
 
 .project-card a {
   display: block;
-  margin-top: 30px; /* Default for desktop */
   color: #007bff;
   font-weight: bold;
   text-decoration: none;
+  padding-bottom: 5px;
 }
 
 .project-card a:hover {
   text-decoration: underline;
-}
-
-/* Adjust link position on mobile */
-@media (max-width: 600px) {
-  .project-card a {
-    margin-top: 15px; /* Reduce margin on mobile for tighter spacing */
-  }
 }
