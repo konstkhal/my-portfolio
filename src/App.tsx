@@ -6,6 +6,16 @@ import './App.css';
 
 const projects = [
 	{
+		yearDate: '2025',
+		title: 'One-pager “My portfolio"',
+		description:
+			'Page viewable on any device to get info about My professional growth and past projects” built with Vite, Github pages, React, grid, JS (ES6):',
+		link: 'https://konstkhal.github.io/my-portfolio/',
+		linkTitle:
+			'View deployed portfolio',
+	},
+
+	{
 		yearDate: '2021',
 		title:
 			'One-pager “Learning how to learn"',
