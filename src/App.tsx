@@ -16,6 +16,17 @@ const projects = [
 	},
 
 	{
+		yearDate: '2024',
+		title:
+			'Bra size calculator UI for Ritwote Start Up',
+		description:
+			'Page to interact with API to calculate Bra size built with React, TypeScript, Material UI, AWS, CI/CD',
+		link: 'https://ritwote.com/',
+		linkTitle:
+			'Project unaccessible, to be deployed soon',
+	},
+
+	{
 		yearDate: '2025',
 		title: 'One-pager “My portfolio"',
 		description:
